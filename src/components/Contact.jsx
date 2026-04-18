@@ -41,8 +41,8 @@ const Contact = () => {
         </div>
         <div>
             <h3>Contact Us</h3>
-            <p>03194756008</p>
-            <p>mutahirhussain03@gmail.com</p>
+            <p>03150506159</p>
+            <p>abdurehman2309@gmail.com</p>
         </div>
         <div>
             <h3>Open Every day</h3>
@@ -52,9 +52,9 @@ const Contact = () => {
                 </p>
             ))}
         </div>
-        <div>
-            <h3>Socials</h3>
-            <div className="flex-center gap-5">
+        <div className="socials-section">
+            <h3 className="socials-heading">Socials</h3>
+            <div className="flex-center gap-5 socials-icons">
               {socials.map((social)=> (
                 <a key={social.name}
                 href={social.url}

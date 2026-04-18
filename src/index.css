@@ -1,18 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Outfit:wght@100..900&display=swap");
 
 @import "tailwindcss";
-
-@font-face {
-    font-family: "Modern Negra";
-    src: url("/fonts/Modern Negra Demo.ttf") format("truetype");
-}
 
 @theme {
     --color-yellow: #e7d393;
     --color-white-100: #efefef;
-    --font-sans: "Mona Sans", sans-serif;
-    --font-modern-negra: "Modern Negra", sans-serif;
-    --font-serif: "DM Serif Text", serif;
+    --font-heading: "Faculty Glyphic", sans-serif;
+    --font-body: "Outfit", sans-serif;
 }
 
 html,
@@ -22,6 +16,11 @@ body {
     color: white;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    font-family: "Outfit", sans-serif;
+}
+
+p {
+    font-family: "Outfit", sans-serif;
 }
 
 @utility flex-center {
@@ -72,7 +71,7 @@ body {
         }
 
         p {
-            @apply font-modern-negra text-3xl -mb-2;
+            @apply font-heading text-2xl md:text-3xl -mb-2;
         }
 
         a {
@@ -92,7 +91,7 @@ body {
         @apply relative z-10 min-h-dvh w-full border border-transparent;
 
         h1 {
-            @apply md:mt-32 mt-40 text-8xl md:text-[20vw] leading-none text-center font-modern-negra;
+            @apply md:mt-32 mt-32 text-5xl md:text-[20vw] leading-none text-center font-heading;
         }
 
         .left-leaf {
@@ -110,7 +109,7 @@ body {
                 @apply flex lg:flex-row flex-col w-full gap-10 justify-between items-center lg:items-end mx-auto;
 
                 p:nth-of-type(2) {
-                    @apply font-modern-negra text-6xl text-yellow max-w-xl;
+                    @apply font-heading text-3xl md:text-6xl text-yellow max-w-xl;
                 }
 
                 p:last-of-type {
@@ -169,7 +168,7 @@ body {
                     @apply flex justify-between items-start;
 
                     h3 {
-                        @apply font-modern-negra 2xl:text-3xl text-xl text-yellow;
+                        @apply font-heading 2xl:text-3xl text-xl text-yellow;
                     }
 
                     p {
@@ -191,7 +190,7 @@ body {
             @apply grid grid-cols-1 lg:grid-cols-12 gap-5;
 
             h2 {
-                @apply text-5xl md:text-6xl font-modern-negra max-w-lg;
+                @apply text-3xl md:text-6xl font-heading max-w-lg;
             }
 
             .sub-content {
@@ -243,9 +242,9 @@ body {
     #art {
         @apply flex-center flex-col min-h-dvh p-5 mt-20 relative radial-gradient;
 
-        h2 {
-            @apply relative md:text-[20vw] text-8xl text-nowrap leading-none font-modern-negra text-center text-[#505050] mb-8;
-        }
+h2 {
+                @apply relative md:text-[20vw] text-5xl md:text-8xl text-nowrap leading-none font-heading text-center text-[#505050] mb-8;
+            }
 
         .content {
             @apply flex md:flex-row flex-col justify-between md:mb-16 md:mt-0 mt-40 gap-10;
@@ -257,7 +256,7 @@ body {
 
         .masked-container {
             h2 {
-                @apply text-4xl md:text-5xl font-modern-negra text-center mb-10 text-white mt-32;
+                @apply text-4xl md:text-5xl font-heading text-center mb-10 text-white mt-32;
             }
 
             div {
@@ -289,7 +288,7 @@ body {
             @apply grid md:grid-cols-4 grid-cols-2 md:gap-20 gap-10 sm:mb-32 mb-20 relative z-10 md:max-w-6xl md:mx-auto;
 
             button {
-                @apply md:text-3xl text-xl pb-2 cursor-pointer hover:text-yellow hover:border-yellow border-b-1 transition-colors font-modern-negra;
+                @apply md:text-3xl text-xl pb-2 cursor-pointer hover:text-yellow hover:border-yellow border-b-1 transition-colors font-heading;
             }
         }
 
@@ -303,7 +302,7 @@ body {
                     @apply text-white hover:text-yellow cursor-pointer transition-colors max-w-36;
 
                     span {
-                        @apply text-3xl font-modern-negra leading-none hidden md:block;
+                        @apply text-3xl font-heading leading-none hidden md:block;
                     }
                 }
             }
@@ -324,7 +323,7 @@ body {
                 @apply space-y-4 lg:translate-y-20;
 
                 #title {
-                    @apply font-modern-negra md:text-6xl text-3xl text-yellow max-w-40;
+                    @apply font-heading md:text-6xl text-3xl text-yellow max-w-40;
                 }
             }
 
@@ -357,20 +356,48 @@ body {
             @apply container mx-auto lg:py-14 2xl:py-32 py-16 flex flex-col justify-between gap-10 min-h-dvh;
 
             h2 {
-                @apply lg:text-6xl 2xl:text-8xl text-5xl font-modern-negra md:translate-y-0 translate-y-5;
+                @apply lg:text-4xl 2xl:text-5xl text-4xl font-heading md:translate-y-0 translate-y-5;
             }
 
             h3 {
-                @apply uppercase xl:text-base 2xl:text-lg text-base mb-2;
+                @apply uppercase xl:text-base text-base mb-2;
             }
 
             p {
-                @apply lg:text-2xl 2xl:text-3xl text-sm;
+                @apply lg:text-xl text-sm;
+            }
+
+            .socials-heading {
+                @apply text-xs lg:text-sm;
+            }
+
+            .socials-icons img {
+                @apply w-5 h-5 lg:w-6 lg:h-6;
             }
         }
 
         .drink-img {
             @apply absolute bottom-0 right-0 lg:w-96 w-1/3 pointer-events-none;
         }
+    }
+}
+
+.desktop-only {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .desktop-only {
+        display: block;
+    }
+}
+
+.mobile-show {
+    display: block !important;
+}
+
+@media (min-width: 768px) {
+    .mobile-show {
+        display: none !important;
     }
 }
